@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  react-app:
+    image: my-react-dev-app  # Name of the image, same as you used in the Dockerfile build
+    build:
+      context: .  # Use the current directory for the build context
+    ports:
+      - "3006:3006"  # Expose port 3000 for React development server
+    volumes:
+      - .:/app  # Mount the current directory to /app inside the container
+    environment:
+      - CHOKIDAR_USEPOLLING=true  # Necessary for file change detection in some environments like Docker
+    command: npm start  # Run the React app with the development server
+    working_dir: /app  # Set the working directory to /app in the container
