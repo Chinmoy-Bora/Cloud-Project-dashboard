@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Step 6: Expose the port React runs on
-EXPOSE 3006
+EXPOSE 3000
 
 # Step 7: Start the development server
 CMD ["npm", "start"]
