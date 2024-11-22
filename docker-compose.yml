@@ -6,7 +6,7 @@ services:
     build:
       context: .  # Use the current directory for the build context
     ports:
-      - "3006:3006"  # Expose port 3000 for React development server
+      - "3006:3000"  # Expose port 3000 for React development server
     volumes:
       - .:/app  # Mount the current directory to /app inside the container
     environment:

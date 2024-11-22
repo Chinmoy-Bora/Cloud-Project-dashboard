@@ -24,7 +24,7 @@ function App() {
 
     try {
       // Make the Axios POST request
-      const response = await axios.post('http://localhost:3000/api/create-pool', requestBody, {
+      const response = await axios.post('http://ec2-18-205-185-36.compute-1.amazonaws.com/api/create-pool', requestBody, {
         headers: {
           'Content-Type': 'application/json',
         },
