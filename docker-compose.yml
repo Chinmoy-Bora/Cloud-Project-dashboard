@@ -10,6 +10,5 @@ services:
     volumes:
       - .:/app  # Mount the current directory to /app inside the container
     environment:
-      - CHOKIDAR_USEPOLLING=true  # Necessary for file change detection in some environments like Docker
-    command: npm start  # Run the React app with the development server
+      - CHOKIDAR_USEPOLLING=true  # Necessary for file change detection in some environments like Docker # Run the React app with the development server
     working_dir: /app  # Set the working directory to /app in the container
